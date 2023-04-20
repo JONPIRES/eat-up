@@ -4,7 +4,7 @@
 
 4- initialize a repo
 
-5-do and "npm install"
+5-do an "npm install"
 
 6- npm run build
 
