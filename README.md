@@ -6,6 +6,8 @@
 
 5-do and "npm install"
 
-6- touch .env
+6- npm run build
 
-7- add DATABASE_URL & SECRET in the .env file
+7- touch .env
+
+8- add DATABASE_URL & SECRET in the .env file
