@@ -2,8 +2,12 @@
 
 2- git remote remove origin OR rm -rf .git
 
-3-do and "npm install"
+4- initialize a repo
 
-4- touch .env
+5-do an "npm install"
 
-5- add DATABASE_URL & SECRET in the .env file
+6- npm run build
+
+7- touch .env
+
+8- add DATABASE_URL & SECRET in the .env file
