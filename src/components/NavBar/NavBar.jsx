@@ -7,15 +7,18 @@ export default function NavBar({ user, setUser }) {
   }
   return (
     <nav>
-      <Link to="/Login">Login</Link>
-      &nbsp; | &nbsp;
-      <Link to="/Signup">Signup</Link>
-      &nbsp;&nbsp;
-      <span>Welcome, {user && user.name} </span>
-      &nbsp;&nbsp;
-      <Link to="" onClick={handleLogout}>
-        Log Out
-      </Link>
+      {user ? (
+        <>
+          <Link to="" onClick={handleLogout}>
+            Log Out
+          </Link>
+        </>
+      ) : (
+        <>
+          <Link to="/Login">Login</Link> ||
+          <Link to="/Signup">Signup</Link>
+        </>
+      )}
     </nav>
   );
 }
