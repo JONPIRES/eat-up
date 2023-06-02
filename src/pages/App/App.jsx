@@ -12,14 +12,22 @@ export default function App() {
 
   return (
     <main className="App">
-      {user ? (
-        <>
-          <NavBar user={user} setUser={setUser} />
-          <Routes>{/* Route components in here */}</Routes>
-        </>
-      ) : (
-        <AuthPage setUser={setUser} />
-      )}
+      <>
+        <NavBar user={user} setUser={setUser} />
+        {user ? (
+          <Routes>
+            {/* Route components in here */}
+            <Route path="/" element={<HomePage />} />
+            {/* this should be the last route */}
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        ) : (
+          <Routes>
+            <Route path="/signup" element={<SignUpForm />} />
+            <Route path="/login" element={<LoginForm setUser={setUser} />} />
+          </Routes>
+        )}
+      </>
     </main>
   );
 }
